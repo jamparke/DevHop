@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="no-server">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>DevHop</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-controller="mainCtrl" class="indigo-skin intro-page university-lp">
+
+  <!--Navbar-->
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar">
+
+    <div class="container">
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+      <a class="navbar-brand" href="#">
+                    <strong>DevHop</strong>
+                </a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+
+        <!--Links-->
+        <ul class="navbar-nav mr-auto">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="city" data-offset="100"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ui-sref="hotSpots" data-offset="100"></a>
+          </li>
+        </ul>
+        <!--Social Icons-->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item ">
+            <a class="nav-link"><i class="fa fa-github"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"><i class="fa fa-slack"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link "><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--/Navbar---->
+  <<!--Mask-->
+    <div class="view intro" id="home">
+      <div class="hm-black-strong">
+        <div class="full-bg-img flex-center">
+          <div class="container">
+            <div class="row smooth-scroll">
+              <div class="col-md-12 white-text text-center">
+                <div class="wow fadeInDown" data-wow-delay="0.2s">
+                  <h1 class="brand-name font-bold mb-2">Move to your best place to live and work.</h1>
+                  <h3 class="subtext-header mt-2 mb-2">Compare cities on quality of life, costs of living, salaries and more.Explore where to move based on your
+                    personal preferences.</h3>
+                </div>
+                <a href="#search" data-offset="100" class="btn btn-rounded btn-info wow fadeInLeft" data-wow-delay="0.2s">Already know where you're headed?
+
+</a>
+                <a href="#hubs" data-offset="100" class="btn btn-rounded btn-info wow fadeInLeft" data-wow-delay="0.2s">Wondering where to move?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/Mask-->
+    </header>
+
+    <main>
+
+
+      <div class="container">
+        <!--  Tech Hub Section  -->
+        <section id="hubs" class="section feature-box mt-4 mx-2 mb-4">
+          <h1 class="font-big font-bold wow fadeIn" data-wow-delay="0.2s">Top three growing tech hubs</h1>
+          <p class="px-5 mt-3"> Although Silicon Valley remains a stalwart tech hub, metros like Toronto and Atlanta are breaking into the rankings
+            of the best markets for tech jobs, according to a new study. And smaller markets — say Madison, Wisconsin — are
+            showing up as locales with momentum as they rapidly increase their small communities of tech workers. The secret
+            weapon these cities all have in common: rents that aren't through the roof. An annual analysis released Tuesday
+            from real estate and investment firm CBRE ranked the top cities for tech talent, based on factors including available
+            workers and cost of living.</p>
+          <div class="card-group mx-5 my-5">
+            <div class="card mx-2">
+              <img class="img-fluid" src="http://keyrenteraustin.com/wp-content/uploads/2016/05/Austin-Texas-Property-Management.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Autsin, Tx</h4>
+                <form ng-submit="getAustin('austin')">
+                  <button type="submit" class="btn btn-rounded btn-info wow fadeInLeft">Detail</button>
+                </form>
+              </div>
+            </div>
+            <div class="card mx-2">
+              <img class="img-fluid" src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2016/08/04/103845788-_sites-default-files-images-103845788-GettyImages-155735310.600x400.jpg"
+                alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">Seattle</h4>
+                <form ng-submit="getSeattle('seattle')">
+                  <button type="submit" class="btn btn-rounded btn-info wow fadeInLeft">Detail</button>
+                </form>
+              </div>
+            </div>
+            <div class="card mx-2">
+              <img class="img-fluid" src="https://www.sarahlawrence.edu/media/student-life/nyc_main.jpg" alt="Card image cap">
+              <div class="card-block">
+                <h4 class="card-title">New York City</h4>
+                <form ng-submit="changeCity('new-york')">
+                  <button type="submit" class="btn btn-rounded btn-info wow fadeInLeft">Detail</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!--  Search Function  -->
+      <section id="search" class="section feature-box pt-5 mb-0">
+        <div>
+          <h1 class="mb-3 font-big font-bold wow fadeIn data-wow-delay=0.2s">Find data on other hot spots</h1>
+          <form ng-submit="doStuff()">
+            <input type="object" class="my-input" name="field" tabindex="1" autocomplete="off" placeholder="search for a city here">
+            <button class="mb-5 mt-3 btn btn-rounded btn-info wow fadeInLeft" type="submit">Search</button>
+          </form>
+        </div>
+      </section>
+
+
+      <!--  City Detail  -->
+
+      <div>
+        <div id="cityHeader" class="section img-fluid mt-0" ng-style="{'background-image':'url('+curArea.image+')'}">
+        </div>
+      </div>
+      <div id="cityData" class="container;">
+        <section class="section feature-box mt-4 mb-4">
+          <h1 class="mt-3 mb-2 font-big font-bold wow">{{curArea.name}}</h1>
+          <p class="mb-3">{{curArea.overview}}</p>
+
+          <!--/.Card-->
+          <div class="row">
+            <!--Job pay Card------------------>
+            <div class="col-lg-6">
+              <!--Card content-->
+              <div class="card-block">
+                <!--Title-->
+                <h4 class="card-title">WebDev Salary</h4>
+                <!--Text-->
+                <div>
+                  <div class="money">
+                    ${{jobs.percentile_50 | number:0}}
+                  </div>
+                  <div>Median Salary</div>
+                </div>
+                <h4 class="mt-2 card-title">Cost of Daily Goods (IN USD)</h4>
+                <!--Text-->
+                <div class="money">
+                  ${{housing.currency_dollar_value}}
+                </div>
+                <p class="card-text">Median rent for small apartment in city center.</p>
+              </div>
+            </div>
+            <!--/.Card content-->
+            <!--Cost of Living Card------------------>
+            <div class="col-lg-6">
+              <!--Card content-->
+              <div class="card-block">
+                <!--Title-->
+                <h4 class="card-title">Cost of Daily Goods (IN USD)</h4>
+                <!--Text-->
+                <div>
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th scope="row">{{cost[3].label}}</th>
+                        <td>${{cost[3].currency_dollar_value | number:0}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">{{cost[4].label}}</th>
+                        <td>${{cost[4].currency_dollar_value | number:0}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">{{cost[8].label}}</th>
+                        <td>${{cost[8].currency_dollar_value | number:0}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">{{cost[7].label}}</th>
+                        <td>${{cost[7].currency_dollar_value | number:0}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <div>
+                  </div>
+
+                </div>
+                <!--/.Card content-->
+
+              </div>
+              <!--/.Card-->
+            </div>
+
+            <!--Score Card---->
+            <div class="col-lg-12">
+              <!--Card content-->
+              <div class="scoreBox">
+                <!--Title-->
+                <h4 class=" my-2 card-title">Quaility of life Score</h4>
+                <!--Text-->
+
+                <ul class="teleport-scores text-left">
+                  <li class="scoreBars" ng-repeat="score in scores">
+                    <span class="teleport-bar">
+                <span style="width:{{((score.score_out_of_10)*10)}}%;"></span>
+                    </span>
+                    <span class="teleport-score">{{score.score_out_of_10 | number: 0}}/10</span>
+                    <span class="teleport-label">{{score.name}}</span>
+                  </li>
+                </ul>
+              </div>
+              <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+        </section>
+
+        </div>
+
+        <ui-view></ui-view>
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- SCRIPTS -->
+    </script>
+    <!--  Angular.js   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./angular/app.js"></script>
+    <script src="./angular/mainSrv.js"></script>
+    <script src="./angular/mainCtrl.js"></script>
+    <!--  Angular view templates, ctrl, and servc  -->
+    <script src="./angular/city/cityCtrl.js"></script>
+    <script src="./angular/city/citySrv.js"></script>
+    <script src="./angular/home/homeCtrl.js"></script>
+    <script src="./angular/hotSpots/hotSpotsCtrl.js"></script>
+    <!-- project javascript location   -->
+    <script src="./js/no-server.js"></script>
+    <!-- JQuery -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script src="js/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js"></script>
+    <!--  Teleport Auto Complete  -->
+    <script src="js/teleport.autocomplete.js"></script>
+    <!-- Nav bar search function + autocomplete via Teleport API  
+  <script>
+    // var $results = document.querySelector('.results');
+    // var appendToResult = $results.insertAdjacentHTML.bind($results, 'afterend');
+    // TeleportAutocomplete.init('.my-input').on('change', function (value) {
+    //   appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+    //   //  Here's where i can take the data back to angular
+    //   // console.log(JSON.stringify(value, null, 2));
+    //   var cityResults = JSON.stringify(value, null, 2);
+    // });
+    </script> -->
+
+    <script>
+      // var $results = document.querySelector('.results');
+    // var appendToResult = $results.insertAdjacentHTML.bind($results, 'afterend');
+    // TeleportAutocomplete.init('.my-input').on('change', function (value) {
+    //   appendToResult('<pre>' + JSON.stringify(value) + '</pre>');
+    //   console.log(JSON.stringify(value, null, 2))
+    //   var preCurSlug = (JSON.stringify(value, null, 2));
+    // });
+    </script>
+
+</body>
+
+</html>

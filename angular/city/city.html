@@ -1,0 +1,106 @@
+<!-- Header -->
+<!-- <header class="header masthead" ng-style="{'background-image':'url('+curArea.image+')'}">
+    <div class="container">
+        <div class="intro-text">
+            <span class="name" id="authors"></span>
+        </div>
+    </div>
+</header> -->
+
+<!-- City Data Section -->
+<div class="container-fluid">
+    <div class="hm-black-strong">
+        <div class="section feature-box mt-4 mb-4 container-fluid py-5 px-5 width:100% background-size:cover height:400px" ng-style="{'background-image':'url('+curArea.image+')'}">
+            <h1 class="mb-3 font-big font-bold wow fadeIn" data-wow-delay="0.2s">{{curArea.name}}</h1>
+            <p class="mb-5">{{curArea.overview}}</p>
+        </div>
+    </div>
+
+    <section id="city" class="section feature-box mt-4 mb-4">
+        <h1 class="mb-3 font-big font-bold wow fadeIn" data-wow-delay="0.2s">{{curArea.name}}</h1>
+        <p class="mb-5">{{curArea.overview}}</p>
+        <div class="row features center">
+            <!--Score Card---->
+            <div class="card col-lg-4">
+                <!--Card content-->
+                <div class="card-block text-left">
+                    <!--Title-->
+                    <h4 class="card-title">Quaility of life Score</h4>
+                    <!--Text-->
+                    <p class="card-text"></p>
+                    <ul class=teleport-scores "card-text">
+                        <li ng-repeat="score in scores">
+                            <span class="teleport-bar">
+                <span style="width:{{((score.score_out_of_10)*10)}}%;"></span>
+                            </span>
+                            <span class="teleport-score">{{score.score_out_of_10 | number: 0}}/10</span>
+                            <span class="teleport-label">{{score.name}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.Card content-->
+            </div>
+            <!--/.Card-->
+            <!--Job pay Card------------------>
+            <div class="card col-lg-4">
+                <!--Card content-->
+                <div class="card-block">
+                    <!--Title-->
+                    <h4 class="card-title">WebDev Salary</h4>
+                    <!--Text-->
+                    <p class="card-text">Estimated Annual Salary (IN USD).</p>
+                    <div>
+                        <div>
+                            ${{jobs.percentile_50 | number:0}}
+                        </div>
+                        <div>Median Salary</div>
+                    </div>
+                </div>
+            </div>
+            <!--/.Card content-->
+            <!--Cost of Living Card------------------>
+            <div class="card col-lg-4">
+                <!--Card content-->
+                <div class="card-block">
+                    <!--Title-->
+                    <h4 class="card-title">Cost of Living (IN USD)</h4>
+                    <!--Text-->
+                    <div>
+                        ${{housing.currency_dollar_value}}
+                    </div>
+                    <p class="card-text">Median rent for small apartment in city center.</p>
+                    <div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{cost[3].label}}</th>
+                                    <td>${{cost[3].currency_dollar_value | number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{cost[4].label}}</th>
+                                    <td>${{cost[4].currency_dollar_value | number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{cost[8].label}}</th>
+                                    <td>${{cost[8].currency_dollar_value | number:0}}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">{{cost[7].label}}</th>
+                                    <td>${{cost[7].currency_dollar_value | number:0}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div>
+                        </div>
+
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+            </div>
+        </div>
+    </section>
+
+</div>

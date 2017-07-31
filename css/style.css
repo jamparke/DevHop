@@ -1,0 +1,180 @@
+/* YOUR CUSTOM STYLES */
+html,
+body,
+.view {
+    height: 100%;
+}
+
+.view {
+    background: url("/img/myimages//architecture.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+}
+ #cityData {
+   max-width: 800px;
+   margin: 0 auto;
+ } 
+.navbar {
+    
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.navbar .navbar-collapse {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+} 
+#search {
+background-color: rgb(238, 238, 238);
+}
+#cityHeader {
+padding:200px;
+ background-repeat: no-repeat;
+  background-position: center; 
+ max-width: 100%;
+ height: auto;
+ 
+}
+/******** telport table scores section*****/
+.money {
+  font-weight: bold;
+}
+.scoreBars {
+ margin-bottom: 4px
+}
+.scoreBox {
+ align-content: center;
+}
+.teleport-scores {
+list-style: none;
+    margin: 30px auto;
+    padding: 0;
+    font-size: 14px;
+}
+.teleport-bar {
+    background-color: rgba(240,240,240,1);
+    display: inline-block;
+    height: 16px;
+    width: 500px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+.teleport-bar span {
+    display: block;
+    float: left;
+     background-color: rgb(127, 130, 197); 
+    height: 100%;
+    border-radius: 20px;
+}
+.teleport-score {
+    font-weight: 700;
+    width: 50px;
+    display: inline-block;
+}
+.teleport-label {
+  width: auto;
+  font-size: 17px;
+}
+
+/*! teleport-autocomplete - v0.3.3 | https://github.com/teleport/autocomplete#readme | MIT */
+.tp-autocomplete {
+  margin: 0 auto;
+  max-width: 25em; 
+  text-align: center;
+  position: relative;
+}
+
+.tp-ac__input {
+  width: 100%;
+  padding: 0.25em;
+  border: solid 1px transparent;
+  border-radius: 0;
+  background-color: #fafafa;
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35); */
+  font-size: 1.25em;
+  font-weight: bold;
+  -webkit-appearance: none;
+  text-overflow: ellipsis; }
+  .tp-ac__input::-webkit-input-placeholder {
+    color: #ccc;
+    -webkit-font-smoothing: antialiased; }
+  .tp-ac__input::-moz-placeholder {
+    color: #ccc;
+    -webkit-font-smoothing: antialiased; }
+  .tp-ac__input:-ms-input-placeholder {
+    color: #ccc;
+    -webkit-font-smoothing: antialiased; }
+  .tp-ac__input::placeholder {
+    color: #ccc;
+    -webkit-font-smoothing: antialiased; }
+  .tp-ac__input:focus {
+    outline: none; }
+  .tp-ac__input::-ms-clear {
+    display: none; }
+  .spinner .tp-ac__input {
+    padding-right: 1.5em;
+    margin-right: -1.5em; }
+
+.tp-ac__list {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  color: #979797;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+  font-size: 0.875em; }
+
+.tp-ac__item {
+  overflow: hidden;
+  padding: 0.35714em 0.71429em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+  .tp-ac__item:hover, .tp-ac__item.is-active {
+    background-color: #ddd; }
+  .tp-ac__item.no-results, .tp-ac__item.no-results:hover {
+    cursor: default;
+    background-color: #fff; }
+  .tp-ac__item span {
+    color: #4a4a4a;
+    font-weight: bold; }
+
+@-webkit-keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spinner {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.spinner:before {
+  position: absolute;
+  top: 50%;
+  right: 0.5em;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.625em;
+  margin-left: -0.625em;
+  content: '';
+  -webkit-animation: spinner 1s linear infinite;
+          animation: spinner 1s linear infinite;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%; }
+
+/*# sourceMappingURL=teleport-autocomplete.css.map */
